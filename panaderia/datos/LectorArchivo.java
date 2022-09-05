@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Se encarga de leer los archivos de texto con cierto formato.
+ */
+
 public class LectorArchivo implements IFuenteDatos {
 
    private String nombreArchivo;
@@ -14,6 +18,11 @@ public class LectorArchivo implements IFuenteDatos {
       this.nombreArchivo = nombreArchivo;
    }
 
+   /**
+    * Separa el texto de un archivo .txt. 
+    *Cada atributo por una coma (,) y cada objeto con un slash (/)
+    * Retorna una lista de arreglos de strings que sera manipulada mas adelante
+    */
    @Override
    public List<String[]> obtenerDatosBase() throws  IOException {
       String dato = "";
